@@ -12,8 +12,6 @@ window.FastClick && FastClick.attach(document.body);
 
 const { Router, Route, IndexRoute, Link, hashHistory } = ReactRouter;
 
-const PageHome = require('../pages/home');
-const PageDemo = require('../pages/demo');
 const demoTab = require('../pages/demotab');
 
 class App extends React.Component {
@@ -29,9 +27,7 @@ class App extends React.Component {
 ReactDOM.render(
     <Router history={hashHistory}>
         <Route name="app" path="/" component={App}>
-            <IndexRoute component={PageHome}/>
-            <Route path="home" component={PageHome}/>
-            <Route path="demo" component={PageDemo}/>
+            <IndexRoute component={demoTab}/>
             <Route path="demoTab" component={demoTab}/>
         </Route>
     </Router>,
